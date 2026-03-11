@@ -490,7 +490,7 @@ def do_renew(sb):
                     method: 'POST',
                     headers: {{ 'Content-Type': 'application/json' }},
                     credentials: 'include',
-                    body: JSON.stringify({{ id: {server_id}, captcha: '{token}' }})
+                    body: JSON.stringify({{ id: '{server_id}', captcha: '{token}' }})
                 }});
                 const data = await res.json();
                 return JSON.stringify(data);
